@@ -1,0 +1,301 @@
+/* Allgemeines Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", monospace;
+    color: white;
+    background-image: url('C:/StaticMotion/Photos/Backgroundneww.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Menü */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 10000;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* App-Icons */
+.app-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.app-icon:hover {
+    opacity: 1;
+}
+
+.app-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
+
+.app-icon span {
+    font-size: 1rem;
+}
+
+/* Container */
+.container {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Hintergrund-Effekt */
+.background-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('blurred-face.jpg') no-repeat center center/cover;
+    filter: blur(20px) brightness(0.5);
+    z-index: 0;
+}
+
+/* Inhalt */
+.content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+/* Windows-98-Stil */
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #d1d9e6;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0px #6b6b6b;
+    z-index: 9999;
+}
+/*
+.title-bar {
+    background-image: linear-gradient(to right, rgb(4, 0, 255), RGB(59, 119, 188));
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    cursor: move;
+}
+
+.title-bar-text {
+    padding-left: 5px;
+}
+
+.title-bar-controls button {
+    width: 15px;
+    height: 15px;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+}
+
+.title-bar-controls {
+    display: flex;
+    align-items: center; /* Vertikal zentrieren */
+    /*justify-content: flex-end; /* Rechtsbündig */
+    /*gap: 5px; /* Abstand zwischen den Buttons */
+/*}
+*/
+
+.title-bar{
+    background-image: linear-gradient(to right, rgb(4, 0, 255), RGB(59, 119, 188));
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    cursor: move;
+}
+
+.title-bar .title-bar-controls{
+    display: flex;
+    gap: 5px;
+}
+
+
+/*.title-bar .title-bar-controls .btn{
+    aspect-ratio: 1;
+    width: 20px;
+}*/
+
+
+.title-bar-controls button:nth-child(1) {
+    background-color: orange;
+}
+
+.title-bar-controls button:nth-child(2) {
+    background-color: rgb(50, 207, 50);
+}
+
+.title-bar-controls button:nth-child(3) {
+    background-color: red;
+}
+
+.title-bar-controls button:hover {
+    opacity: 0.7;
+}
+
+.title-bar-controls button::before {
+        font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+/*
+.title-bar .btn{
+    width: 100%;
+}*/
+
+.window-body {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Blur-Effekt */
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Kontakt-Button */
+.contact-button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    z-index: 10000;
+}
+
+.contact-button {
+    background: transparent;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, opacity 0.3s;
+    z-index: 10001;
+    font-family: "Courier New", monospace;
+}
+
+/* Kontakt-Seite */
+.contact-page {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    z-index: 5;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-page.show {
+    display: block;
+}
+
+/* Animierte Scroll-Funktion */
+html, body {
+    scroll-behavior: smooth;
+}
