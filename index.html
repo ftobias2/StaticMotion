@@ -26,15 +26,15 @@
         <!-- App Icons -->
         <div class="app-icons">         
             <a href="lookbook.html" class="app-icon" id="lookbook-icon">
-                <img src="C:/StaticMotion/Photos/icoLookbook.ico" alt="Lookbook Icon">
+                <img src="Photos/icoLookbook.ico" alt="Lookbook Icon">
                 <span>Lookbook</span>
             </a>
             <a href="graphic_design.html" class="app-icon" id="graphic-design-icon">
-                <img src="C:/StaticMotion/Photos/icoGraficDesign.JPG" alt="Graphic Design Icon">
+                <img src="Photos/icoGraficDesign.JPG" alt="Graphic Design Icon">
                 <span>Graphic Design</span>
             </a>
             <a href="photo_video.html" class="app-icon" id="photo-video-icon">
-                <img src="C:/StaticMotion/Photos/icoPhoto.jpg" alt="Photo/Video Icon">
+                <img src="Photos/icoPhoto.jpg" alt="Photo/Video Icon">
                 <span>Photo/Video</span>
             </a>
         </div>
@@ -51,9 +51,6 @@
     <!-- Kontakt Seite -->
     <div id="contact-page" class="contact-page">
         <div class="contact-content">
-            <div class="menu2">  
-                <a href="index.html" class="active" id="home-button">Home</a>
-            </div>
             <h2>Contact Information</h2>
             <p>Das Page ufe funktioniert noned will de button ned so will wie ich</p>
             <p>Email: example@example.com</p>
@@ -92,7 +89,7 @@ document.getElementById("graphic-design-icon").addEventListener("click", functio
             if (title === "Lookbook") {
                 contentHTML = `
                                <p>Hier siehst du eine Sammlung unserer besten Styles.</p>
-                               <img src="C:\StaticMotion\Photos\filenotfound.jpg" alt="Lookbook Image" style="width:100%;">`;
+                               <img src="Photos\filenotfound.jpg" alt="Lookbook Image" style="width:100%;">`;
             } else if (title === "Graphic Design") {
                 contentHTML = `<h2>Graphic Design</h2>
                                <p>Hier sind einige unserer Grafikdesign-Projekte.</p>
@@ -158,8 +155,8 @@ document.getElementById("graphic-design-icon").addEventListener("click", functio
 
         // Kontakt Button Event Listener
 document.getElementById("contact-button").addEventListener("click", function() {
-    // "Home"-Button ausblenden
-    document.getElementById("home-button").style.display = "none";
+
+    
 
     // "ABOUT"-Seite anzeigen
     document.getElementById("contact-button").style.display = "none";
@@ -168,22 +165,6 @@ document.getElementById("contact-button").addEventListener("click", function() {
     // Scrollen zum unteren Ende der Seite
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 });
-
-// Zurück zum Home-Button
-document.getElementById("home-button-contact").addEventListener("click", function(event) {
-    event.preventDefault();
-
-    // Verzögerung hinzufügen, um den Scroll-Effekt smooth zu machen
-    setTimeout(function() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 50);  // Verzögerung (in Millisekunden)
-
-    // "Home"-Button wieder anzeigen und "ABOUT"-Seite ausblenden
-    document.getElementById("home-button").style.display = "block";
-    document.getElementById("contact-button").style.display = "block";
-    document.getElementById("contact-page").classList.remove("show");
-});
     </script>
-
 </body>
 </html>
